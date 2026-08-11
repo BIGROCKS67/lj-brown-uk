@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #0e1014;
+  --ink-soft: #171a21;
+  --ink-muted: #22262f;
+  --gold: #c59436;
+  --gold-light: #d4a94f;
+  --gold-dark: #a57a28;
+  --steel: #9aa0a8;
+  --steel-light: #c5c9cf;
+  --mist: #e8eaed;
+  --paper: #f3f4f6;
+  --white: #ffffff;
+  --background: var(--paper);
+  --foreground: var(--ink);
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-muted: var(--ink-muted);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+  --color-steel: var(--steel);
+  --color-steel-light: var(--steel-light);
+  --color-mist: var(--mist);
+  --color-paper: var(--paper);
+  --color-charcoal: var(--ink);
+  --color-charcoal-light: var(--ink-soft);
+  --color-bronze: var(--gold);
+  --color-bronze-light: var(--gold-light);
+  --color-silver: var(--steel);
+  --color-silver-light: var(--steel-light);
+  --color-grey: var(--steel);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-outfit);
+  --font-display: var(--font-barlow);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-outfit), system-ui, sans-serif;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+input,
+select,
+textarea {
+  font-size: max(16px, 1rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+::selection {
+  background: var(--gold);
+  color: white;
+}
+
+.font-display {
+  font-family: var(--font-barlow), system-ui, sans-serif;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+}

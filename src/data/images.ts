@@ -1,0 +1,25 @@
+export const images = {
+  hero: "/images/hero-cover.jpg",
+  about: "/images/slider-2.jpg",
+  cta: "/images/slider-1.jpg",
+  services: {
+    excavation: "/images/excavation.jpg",
+    grading: "/images/slider-3.jpg",
+    trenching: "/images/trenching.jpg",
+    landClearing: "/images/land-clearing.jpg",
+    foundations: "/images/foundations.jpg",
+    utilities: "/images/utilities.jpg",
+    earthwork: "/images/earthwork.jpg",
+    drainage: "/images/drainage.jpg",
+  },
+  projects: {
+    foodFactory: "/images/slider-1.jpg",
+    caravanPads: "/images/slider-4.jpg",
+    flatsWellingborough: "/images/foundations.jpg",
+    carWash: "/images/utilities.jpg",
+    newBradwell: "/images/slider-2.jpg",
+    monkston: "/images/earthwork.jpg",
+    princesRisborough: "/images/trenching.jpg",
+    northamptonFlats: "/images/project-m15.png",
+  },
+} as const;
