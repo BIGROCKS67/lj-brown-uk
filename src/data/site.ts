@@ -4,7 +4,7 @@ export const siteConfig = {
   tagline: "Strong Foundations. Built to Last.",
   description:
     "Family-run groundworks and civil engineers based in Towcester. Excavation, drainage, concrete, roads and site works — professional, reliable, built on experience.",
-  url: "https://ljbrownukltd.co.uk",
+  url: "https://www.ljbrownukltd.co.uk",
   phone: "07719 322825",
   email: "office@ljbrownukltd.co.uk",
   emailAlt: "john@ljbrownukltd.co.uk",
