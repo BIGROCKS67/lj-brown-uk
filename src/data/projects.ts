@@ -77,6 +77,35 @@ export const projects: Project[] = [
     body: "Holiday home park at Pevensey Bay. Groundworks first — pads, plant and the plot taking shape — then the same site with the homes on and the roads in.",
   },
   {
+    id: "acrewood-nursery-amersham",
+    title: "Acrewood Nursery",
+    location: "Amersham",
+    category: "Commercial",
+    summary:
+      "Removed the old parking and replaced it with new — Acrewood Nursery, Amersham.",
+    image: images.projects.acrewood,
+    heroImage: images.projects.acrewoodHero,
+    gallerySections: [
+      {
+        label: "Old out",
+        images: [
+          "/images/acrewood/01-old-out.jpg",
+          "/images/acrewood/02-on-site.jpg",
+        ],
+      },
+      {
+        label: "New in",
+        images: [
+          "/images/acrewood/03-new-surface.jpg",
+          "/images/acrewood/04-finished.jpg",
+          "/images/acrewood/05-finished-aerial.jpg",
+          "/images/acrewood/06-finished-wide.jpg",
+        ],
+      },
+    ],
+    body: "Recent job at Acrewood Nursery in Amersham. Old parking taken out, new surface down and marked up.",
+  },
+  {
     id: "food-factory-wellingborough",
     title: "Food Factory Renovation",
     location: "Wellingborough",

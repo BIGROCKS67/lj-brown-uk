@@ -23,5 +23,7 @@ export const images = {
     monkston: "/images/earthwork.jpg",
     princesRisborough: "/images/trenching.jpg",
     northamptonFlats: "/images/project-m15.png",
+    acrewood: "/images/acrewood/04-finished.jpg",
+    acrewoodHero: "/images/acrewood/05-finished-aerial.jpg",
   },
 } as const;
