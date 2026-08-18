@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/Button";
 import { projects } from "@/data/projects";
 
 export function ProjectsPreview() {
-  const featured = projects.slice(0, 4);
+  const featured = projects.slice(0, 6);
 
   return (
     <section className="bg-ink py-16 sm:py-24">
@@ -17,7 +17,7 @@ export function ProjectsPreview() {
           description="Housing schemes, commercial sites and leisure developments — real groundworks across the Midlands and beyond."
           light
         />
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {featured.map((project, i) => (
             <FadeIn key={project.id} delay={i * 0.08}>
               <Link

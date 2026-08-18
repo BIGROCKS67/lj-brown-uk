@@ -196,33 +196,13 @@ export const projects: Project[] = [
     ],
     body: "Monkston Park, Milton Keynes — 26 dwellings with roads and sewers. Site photos from the scheme as it went up.",
   },
-  {
-    id: "food-factory-wellingborough",
-    title: "Food Factory Renovation",
-    location: "Wellingborough",
-    category: "Commercial",
-    summary:
-      "Groundworks package supporting the renovation of a working food factory — delivered around live site constraints.",
-    image: images.projects.foodFactory,
-  },
-  {
-    id: "princes-risborough",
-    title: "6 Dwellings & Block of 4 Flats",
-    location: "Princes Risborough",
-    category: "Residential",
-    summary:
-      "Mixed residential scheme — houses and flats delivered with a clean, coordinated groundworks package.",
-    image: images.projects.princesRisborough,
-  },
-  {
-    id: "northampton-flats",
-    title: "44 Flats Full Build Contract",
-    location: "Northampton",
-    category: "Residential",
-    summary:
-      "Full build contract for 44 flats — major residential delivery from the ground up.",
-    image: images.projects.northamptonFlats,
-  },
+];
+
+/** Real jobs from the old site — no photos from Johno yet, so they stay off the gallery. */
+export const alsoDelivered = [
+  { title: "Food Factory Renovation", location: "Wellingborough" },
+  { title: "6 Dwellings & Block of 4 Flats", location: "Princes Risborough" },
+  { title: "44 Flats Full Build Contract", location: "Northampton" },
 ];
 
 export function getProject(id: string) {

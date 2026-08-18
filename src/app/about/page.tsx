@@ -72,8 +72,8 @@ export default function AboutPage() {
           <FadeIn delay={0.1}>
             <div className="relative aspect-[4/3] overflow-hidden bg-ink">
               <Image
-                src={images.services.excavation}
-                alt="Excavation works by LJ Brown UK"
+                src={images.aboutTeam}
+                alt="LJ Brown UK on site"
                 fill
                 className="object-cover"
                 sizes="(min-width: 1024px) 48vw, 100vw"

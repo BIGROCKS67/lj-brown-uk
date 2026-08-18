@@ -6,7 +6,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { CTABanner } from "@/components/ui/CTABanner";
 import { images } from "@/data/images";
-import { projectHasPhotos, projects } from "@/data/projects";
+import { alsoDelivered, projectHasPhotos, projects } from "@/data/projects";
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -20,7 +20,7 @@ export default function ProjectsPage() {
       <PageHero
         title="Our Projects"
         subtitle="Real schemes. Real groundworks. Real results."
-        image={images.projects.caravanPadsHero}
+        image={images.projects.carWash}
       />
 
       <section className="bg-paper py-16 sm:py-24">
@@ -28,7 +28,7 @@ export default function ProjectsPage() {
           <SectionHeading
             label="Track Record"
             title="Work We’re Proud Of"
-            description="From 44-flat full builds to 150+ caravan pads — here’s a snapshot of what we’ve delivered."
+            description="Housing, commercial and leisure — real site photos from jobs we’ve delivered."
           />
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -66,6 +66,30 @@ export default function ProjectsPage() {
                 </Link>
               </FadeIn>
             ))}
+          </div>
+
+          <div className="mt-16 border-t border-ink/10 pt-10">
+            <h3 className="font-display text-lg font-semibold text-ink">
+              Also delivered
+            </h3>
+            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-steel">
+              Jobs on the books — photos to follow.
+            </p>
+            <ul className="mt-6 grid gap-3 sm:grid-cols-3">
+              {alsoDelivered.map((job) => (
+                <li
+                  key={`${job.title}-${job.location}`}
+                  className="border-l-2 border-gold bg-white px-4 py-3"
+                >
+                  <p className="font-display text-base font-semibold text-ink">
+                    {job.title}
+                  </p>
+                  <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-gold-dark">
+                    {job.location}
+                  </p>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
