@@ -106,22 +106,55 @@ export const projects: Project[] = [
     body: "Recent job at Acrewood Nursery in Amersham. Old parking taken out, new surface down and marked up.",
   },
   {
-    id: "food-factory-wellingborough",
-    title: "Food Factory Renovation",
-    location: "Wellingborough",
-    category: "Commercial",
-    summary:
-      "Groundworks package supporting the renovation of a working food factory — delivered around live site constraints.",
-    image: images.projects.foodFactory,
-  },
-  {
     id: "car-wash-northampton",
     title: "New Car Wash Facility",
     location: "St James, Northampton",
     category: "Commercial",
     summary:
-      "Site preparation and groundworks for a new car wash facility in Northampton.",
+      "Site preparation and groundworks for a new car wash in Northampton — steel and slab going in, then the finished bays.",
     image: images.projects.carWash,
+    heroImage: images.projects.carWashHero,
+    gallerySections: [
+      {
+        label: "The build",
+        images: [
+          "/images/carwash/01-site.jpg",
+          "/images/carwash/03-site.jpg",
+          "/images/carwash/05-site.jpg",
+          "/images/carwash/08-site.jpg",
+        ],
+      },
+      {
+        label: "Finished",
+        images: [
+          "/images/carwash/09-finished-aerial.jpg",
+          "/images/carwash/10-finished-bays.jpg",
+          "/images/carwash/11-finished-entry.jpg",
+          "/images/carwash/12-finished-wide.jpg",
+        ],
+      },
+    ],
+    body: "Car wash at St James, Northampton. Groundworks and the steel going up first — then the same site with the bays open and the surfacing in.",
+  },
+  {
+    id: "glebe-farm-kettering",
+    title: "New House Foundations",
+    location: "Glebe Farm, Kettering",
+    category: "Residential",
+    summary: "New foundations for a new house at Glebe Farm, Kettering.",
+    image: images.projects.glebe,
+    heroImage: images.projects.glebeHero,
+    gallery: [
+      "/images/glebe/01-foundations.jpg",
+      "/images/glebe/02-foundations.jpg",
+      "/images/glebe/03-foundations.jpg",
+      "/images/glebe/04-foundations.jpg",
+      "/images/glebe/05-foundations.jpg",
+      "/images/glebe/06-foundations.jpg",
+      "/images/glebe/07-foundations.jpg",
+      "/images/glebe/08-foundations.jpg",
+    ],
+    body: "New house at Glebe Farm, Kettering — foundations going in on the plot.",
   },
   {
     id: "new-bradwell-mk",
@@ -131,6 +164,17 @@ export const projects: Project[] = [
     summary:
       "Housing scheme with roads and sewers — full groundworks package for dwellings and flats.",
     image: images.projects.newBradwell,
+    heroImage: images.projects.newBradwellHero,
+    gallery: [
+      "/images/bradwell/07-site.jpg",
+      "/images/bradwell/06-site.jpg",
+      "/images/bradwell/04-site.jpg",
+      "/images/bradwell/05-site.jpg",
+      "/images/bradwell/03-site.jpg",
+      "/images/bradwell/01-site.jpg",
+      "/images/bradwell/02-site.jpg",
+    ],
+    body: "New Bradwell, Milton Keynes — 26 dwellings and 8 flats. Site photos from the groundworks through the houses going up.",
   },
   {
     id: "monkston-park-mk",
@@ -140,6 +184,26 @@ export const projects: Project[] = [
     summary:
       "Residential groundworks including roads and sewer infrastructure across 26 dwellings.",
     image: images.projects.monkston,
+    heroImage: images.projects.monkstonHero,
+    gallery: [
+      "/images/monkston/02-site.jpg",
+      "/images/monkston/07-site.jpg",
+      "/images/monkston/01-site.jpg",
+      "/images/monkston/06-site.jpg",
+      "/images/monkston/04-site.jpg",
+      "/images/monkston/03-site.jpg",
+      "/images/monkston/05-site.jpg",
+    ],
+    body: "Monkston Park, Milton Keynes — 26 dwellings with roads and sewers. Site photos from the scheme as it went up.",
+  },
+  {
+    id: "food-factory-wellingborough",
+    title: "Food Factory Renovation",
+    location: "Wellingborough",
+    category: "Commercial",
+    summary:
+      "Groundworks package supporting the renovation of a working food factory — delivered around live site constraints.",
+    image: images.projects.foodFactory,
   },
   {
     id: "princes-risborough",
