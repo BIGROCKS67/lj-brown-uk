@@ -19,7 +19,7 @@ export default function ServicesPage() {
       <PageHero
         title="Our Services"
         subtitle="Where experience meets precision on site"
-        image={images.services.trenching}
+        image={images.services.excavation}
       />
 
       <section className="bg-white py-16 sm:py-24">

@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.shortName,
     locale: "en_GB",
     type: "website",
-    images: [{ url: "/images/hero-cover.jpg", alt: "LJ Brown UK Ltd" }],
+    images: [{ url: "/images/pevensey/03-start-plant.jpg", alt: "LJ Brown UK Ltd" }],
   },
 };
 

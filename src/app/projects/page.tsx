@@ -20,7 +20,7 @@ export default function ProjectsPage() {
       <PageHero
         title="Our Projects"
         subtitle="Real schemes. Real groundworks. Real results."
-        image={images.projects.flatsWellingboroughHero}
+        image={images.projects.caravanPadsHero}
       />
 
       <section className="bg-paper py-16 sm:py-24">
