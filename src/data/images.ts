@@ -14,7 +14,8 @@ export const images = {
   },
   projects: {
     foodFactory: "/images/slider-1.jpg",
-    caravanPads: "/images/slider-4.jpg",
+    caravanPads: "/images/pevensey/06-now-park.jpg",
+    caravanPadsHero: "/images/pevensey/08-now-homes.jpg",
     flatsWellingborough: "/images/wellingborough/01-foundations.jpg",
     flatsWellingboroughHero: "/images/wellingborough/04-flats-street.jpg",
     carWash: "/images/utilities.jpg",

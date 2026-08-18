@@ -34,7 +34,9 @@ export default async function ProjectPage({
   const project = getProject(id);
   if (!project) notFound();
 
-  const gallery = project.gallery ?? [project.image];
+  const sections = project.gallerySections ?? [
+    { label: "", images: project.gallery ?? [project.image] },
+  ];
   const heroImage = project.heroImage ?? project.image;
 
   return (
@@ -61,20 +63,31 @@ export default async function ProjectPage({
             )}
           </FadeIn>
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            {gallery.map((src, i) => (
-              <FadeIn key={src} delay={(i % 2) * 0.06}>
-                <figure className="relative aspect-[16/10] overflow-hidden bg-ink">
-                  <Image
-                    src={src}
-                    alt={`${project.title}, ${project.location} — photo ${i + 1}`}
-                    fill
-                    className="object-cover"
-                    sizes="(min-width: 640px) 50vw, 100vw"
-                    priority={i < 2}
-                  />
-                </figure>
-              </FadeIn>
+          <div className="mt-10 space-y-10">
+            {sections.map((section) => (
+              <div key={section.label || "photos"}>
+                {section.label && (
+                  <h3 className="mb-4 font-display text-lg font-semibold uppercase tracking-wide text-ink">
+                    {section.label}
+                  </h3>
+                )}
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {section.images.map((src, i) => (
+                    <FadeIn key={src} delay={(i % 2) * 0.06}>
+                      <figure className="relative aspect-[16/10] overflow-hidden bg-ink">
+                        <Image
+                          src={src}
+                          alt={`${project.title}, ${project.location}${section.label ? ` — ${section.label}` : ""} — photo ${i + 1}`}
+                          fill
+                          className="object-cover"
+                          sizes="(min-width: 640px) 50vw, 100vw"
+                          priority={section.label === "The start" && i < 2}
+                        />
+                      </figure>
+                    </FadeIn>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
 

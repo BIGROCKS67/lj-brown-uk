@@ -1,5 +1,10 @@
 import { images } from "./images";
 
+export type GallerySection = {
+  label: string;
+  images: string[];
+};
+
 export type Project = {
   id: string;
   title: string;
@@ -9,8 +14,13 @@ export type Project = {
   image: string;
   heroImage?: string;
   gallery?: string[];
+  gallerySections?: GallerySection[];
   body?: string;
 };
+
+export function projectHasPhotos(project: Project) {
+  return Boolean(project.gallery?.length || project.gallerySections?.length);
+}
 
 export const wellingboroughGallery = [
   "/images/wellingborough/01-foundations.jpg",
@@ -35,6 +45,38 @@ export const projects: Project[] = [
     body: "Site photos from the 17-flat scheme in Wellingborough. Groundworks first — foundations, formwork and plant on the plot — then the brick flats going up with the timber roof on.",
   },
   {
+    id: "caravan-pads-pevensey",
+    title: "150 Pads — Pevensey Bay",
+    location: "Pevensey Bay, Eastbourne",
+    category: "Leisure",
+    summary:
+      "150 pads on a holiday home park — from the groundworks going in through to the park as it stands now.",
+    image: images.projects.caravanPads,
+    heroImage: images.projects.caravanPadsHero,
+    gallerySections: [
+      {
+        label: "The start",
+        images: [
+          "/images/pevensey/01-start-pads.jpg",
+          "/images/pevensey/02-start-excavator.jpg",
+          "/images/pevensey/03-start-plant.jpg",
+          "/images/pevensey/04-start-poured.jpg",
+          "/images/pevensey/05-start-wide.jpg",
+        ],
+      },
+      {
+        label: "How it is now",
+        images: [
+          "/images/pevensey/06-now-park.jpg",
+          "/images/pevensey/07-now-wide.jpg",
+          "/images/pevensey/08-now-homes.jpg",
+          "/images/pevensey/09-now-pads.jpg",
+        ],
+      },
+    ],
+    body: "Holiday home park at Pevensey Bay. Groundworks first — pads, plant and the plot taking shape — then the same site with the homes on and the roads in.",
+  },
+  {
     id: "food-factory-wellingborough",
     title: "Food Factory Renovation",
     location: "Wellingborough",
@@ -42,15 +84,6 @@ export const projects: Project[] = [
     summary:
       "Groundworks package supporting the renovation of a working food factory — delivered around live site constraints.",
     image: images.projects.foodFactory,
-  },
-  {
-    id: "caravan-pads-pevensey",
-    title: "150+ Caravan Pads",
-    location: "Pevensey Bay, Eastbourne",
-    category: "Leisure",
-    summary:
-      "Formation and pads for 150+ caravan plots on a holiday home park — scale, levels and drainage done properly.",
-    image: images.projects.caravanPads,
   },
   {
     id: "car-wash-northampton",

@@ -6,7 +6,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { CTABanner } from "@/components/ui/CTABanner";
 import { images } from "@/data/images";
-import { projects } from "@/data/projects";
+import { projectHasPhotos, projects } from "@/data/projects";
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -59,7 +59,7 @@ export default function ProjectsPage() {
                         {project.summary}
                       </p>
                       <p className="mt-3 text-xs font-semibold uppercase tracking-wider text-gold-dark">
-                        {project.gallery ? "View photos →" : "View project →"}
+                        {projectHasPhotos(project) ? "View photos →" : "View project →"}
                       </p>
                     </div>
                   </article>
