@@ -7,9 +7,33 @@ export type Project = {
   category: string;
   summary: string;
   image: string;
+  heroImage?: string;
+  gallery?: string[];
+  body?: string;
 };
 
+export const wellingboroughGallery = [
+  "/images/wellingborough/01-foundations.jpg",
+  "/images/wellingborough/02-groundworks.jpg",
+  "/images/wellingborough/03-foundations-alt.jpg",
+  "/images/wellingborough/04-flats-street.jpg",
+  "/images/wellingborough/05-flats-scaffold.jpg",
+  "/images/wellingborough/06-roof-trusses.jpg",
+] as const;
+
 export const projects: Project[] = [
+  {
+    id: "flats-wellingborough",
+    title: "17 Flats Development",
+    location: "Wellingborough",
+    category: "Residential",
+    summary:
+      "Groundworks through to the flats going up — 17 units in Wellingborough. Foundations, brickwork and the roof going on.",
+    image: images.projects.flatsWellingborough,
+    heroImage: images.projects.flatsWellingboroughHero,
+    gallery: [...wellingboroughGallery],
+    body: "Site photos from the 17-flat scheme in Wellingborough. Groundworks first — foundations, formwork and plant on the plot — then the brick flats going up with the timber roof on.",
+  },
   {
     id: "food-factory-wellingborough",
     title: "Food Factory Renovation",
@@ -27,15 +51,6 @@ export const projects: Project[] = [
     summary:
       "Formation and pads for 150+ caravan plots on a holiday home park — scale, levels and drainage done properly.",
     image: images.projects.caravanPads,
-  },
-  {
-    id: "flats-wellingborough",
-    title: "17 Flats Development",
-    location: "Wellingborough",
-    category: "Residential",
-    summary:
-      "Groundworks and enabling for a 17-unit residential scheme, setting the platform for the build above.",
-    image: images.projects.flatsWellingborough,
   },
   {
     id: "car-wash-northampton",
@@ -83,3 +98,7 @@ export const projects: Project[] = [
     image: images.projects.northamptonFlats,
   },
 ];
+
+export function getProject(id: string) {
+  return projects.find((project) => project.id === id);
+}

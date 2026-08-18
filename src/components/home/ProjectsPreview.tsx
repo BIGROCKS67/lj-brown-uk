@@ -21,7 +21,7 @@ export function ProjectsPreview() {
           {featured.map((project, i) => (
             <FadeIn key={project.id} delay={i * 0.08}>
               <Link
-                href="/projects"
+                href={`/projects/${project.id}`}
                 className="group relative flex min-h-[280px] overflow-hidden bg-ink-soft sm:min-h-[320px]"
               >
                 <Image

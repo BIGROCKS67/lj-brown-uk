@@ -15,7 +15,8 @@ export const images = {
   projects: {
     foodFactory: "/images/slider-1.jpg",
     caravanPads: "/images/slider-4.jpg",
-    flatsWellingborough: "/images/foundations.jpg",
+    flatsWellingborough: "/images/wellingborough/01-foundations.jpg",
+    flatsWellingboroughHero: "/images/wellingborough/04-flats-street.jpg",
     carWash: "/images/utilities.jpg",
     newBradwell: "/images/slider-2.jpg",
     monkston: "/images/earthwork.jpg",
